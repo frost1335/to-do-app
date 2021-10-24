@@ -12,7 +12,7 @@ export const useRoutes = (props) => {
   return (
     <Switch>
       <Route path="/dashboard" exact>
-        <Dashboard data={{ data }} />
+        <Dashboard data={data} />
       </Route>
       <Route path="/finalize/:testId" exact>
         <Finalize data={data} />

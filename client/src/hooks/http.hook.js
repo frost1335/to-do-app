@@ -11,7 +11,9 @@ export const useHttp = () => {
         },
       }).then((data) => data.json());
       setData(dg);
-    } catch (e) {}
+    } catch (e) {
+      console.log(e);
+    }
   }, []);
 
   useEffect(() => {
