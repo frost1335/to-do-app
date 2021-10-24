@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const DashboardList = (props) => {
   const arrString = Array.from(props.type);
@@ -38,7 +39,13 @@ export const DashboardList = (props) => {
           .replace("http://", "")}
       </div>
       <div className="itemBtn">
-        <button className={`btn-${props.btn}`}>{props.btn}</button>{" "}
+        <Link
+          to={`/${props.btn.toLowerCase()}/${props.id}`}
+          target="_blank"
+          style={{ textDecoration: "none" }}
+        >
+          <button className={`btn-${props.btn}`}>{props.btn}</button>{" "}
+        </Link>
       </div>
     </div>
   );
