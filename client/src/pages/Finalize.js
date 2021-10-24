@@ -3,18 +3,16 @@ import { Link } from "react-router-dom";
 
 export const Finalize = (props) => {
   const data = { ...props.data.data };
-  let test = [];
+  let test;
   const sites = data.sites;
   if (data.tests) {
     let search = window.location.href;
     const testId = search.replace("http://localhost:3000/finalize/", "");
-    test = data.tests.filter((test) => {
-      return test.id.toString() === testId.toString();
-    });
+    test = data.tests.filter(
+      (test) => test.id.toString() === testId.toString()
+    );
   }
-
-  let siteUrl = [];
-
+  let siteUrl;
   if (sites) {
     siteUrl = sites.map((c) => c.url);
   }

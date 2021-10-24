@@ -3,24 +3,19 @@ import { Link } from "react-router-dom";
 
 export const Results = (props) => {
   const data = { ...props.data.data };
-  let test = [];
+  let test;
   const sites = data.sites;
   if (data.tests) {
     let search = window.location.href;
     const testId = search.replace("http://localhost:3000/results/", "");
-    test = data.tests.filter((test) => {
-      return test.id.toString() === testId.toString();
-    });
+    test = data.tests.filter(
+      (test) => test.id.toString() === testId.toString()
+    );
   }
-
-  let siteUrl = [];
-
+  let siteUrl;
   if (sites) {
     siteUrl = sites.map((c) => c.url);
   }
-
-  console.log();
-
   return (
     <div>
       <h1 className="contentHeader">Results</h1>
@@ -31,7 +26,15 @@ export const Results = (props) => {
         {test[0] ? siteUrl[test[0].siteId - 1] : null}
       </p>
 
-      <Link style={{ textDecoration: "none", cursor: 'pointer' , position: 'absolute', bottom: "10%"}} to="/dashboard">
+      <Link
+        style={{
+          textDecoration: "none",
+          cursor: "pointer",
+          position: "absolute",
+          bottom: "10%",
+        }}
+        to="/dashboard"
+      >
         <button className="contentBtn">
           <svg
             stroke="currentColor"

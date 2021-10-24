@@ -125,10 +125,6 @@ class Dashboard extends Component {
     c: 1,
   };
 
-  componentDidMount() {
-    console.log(this.props.data);
-  }
-
   onResetHandler = () => {
     document.querySelector("#search").value = "";
     this.setState({
@@ -140,7 +136,7 @@ class Dashboard extends Component {
     let arr = this.state.search;
 
     if (arr.length) {
-      return arr.map((list, index) => {
+      return arr.map((list) => {
         return (
           <li key={list.id}>
             <span className={`site-${list.siteId}`}></span>
