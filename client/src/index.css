@@ -310,3 +310,21 @@ code {
   padding: 10px 25px;
   cursor: pointer;
 }
+
+.contentBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  width: 80px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  color: #222222;
+  cursor: pointer;
+  margin-top: 40%;
+}

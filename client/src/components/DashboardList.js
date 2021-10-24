@@ -41,7 +41,6 @@ export const DashboardList = (props) => {
       <div className="itemBtn">
         <Link
           to={`/${props.btn.toLowerCase()}/${props.id}`}
-          target="_blank"
           style={{ textDecoration: "none" }}
         >
           <button className={`btn-${props.btn}`}>{props.btn}</button>{" "}

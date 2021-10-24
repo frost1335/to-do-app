@@ -1,4 +1,4 @@
-import React, { Component, useCallback } from "react";
+import React, { Component } from "react";
 import { DashboardList } from "../components/DashboardList";
 
 class Dashboard extends Component {
@@ -125,6 +125,10 @@ class Dashboard extends Component {
     c: 1,
   };
 
+  componentDidMount() {
+    console.log(this.props.data);
+  }
+
   onResetHandler = () => {
     document.querySelector("#search").value = "";
     this.setState({
@@ -162,7 +166,6 @@ class Dashboard extends Component {
   }
 
   render() {
-
     const onSearchHandler = (event) => {
       const val = event.target.value.toLowerCase().trim();
       const tests = this.state.tests.filter((c) => {
