@@ -6,6 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #f9f9f9;
 }
 
 code {
@@ -101,21 +102,211 @@ code {
   color: #999999;
 }
 
-.dashboardBody .itemHead .itemName {
+.dashboardBody .itemHead div {
+  cursor: pointer;
+}
+
+.dashboardBody .item .itemName {
   width: 40%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  color: #474747;
 }
 
-.dashboardBody .itemHead .itemType {
+.dashboardBody .item .itemType {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  color: #5c5c5c;
   width: 15%;
 }
-.dashboardBody .itemHead .itemStatus {
+.dashboardBody .item .itemStatus {
   width: 15%;
 }
 
-.dashboardBody .itemHead .itemSite {
+.dashboardBody .item .itemSite {
   width: 16%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  color: #5c5c5c;
 }
 
-.dashboardBody .itemHead .itemBtn {
+.dashboardBody .item .itemBtn {
+  text-align: end;
   width: 15%;
+}
+
+.dashboardBody .menu li {
+  display: flex;
+  margin: 5px 0;
+}
+
+.dashboardBody .menu {
+  padding-left: 0;
+  list-style: none;
+}
+
+.dashboardBody .menu .item {
+  display: flex;
+  width: 98%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 12px;
+  background: #ffffff;
+  border-radius: 3px;
+}
+
+.dashboardBody .menu .item:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.dashboardBody .menu li .site-1 {
+  display: inline-block;
+  width: 4px;
+  background: #e14165;
+  border-radius: 3px 0px 0px 3px;
+}
+
+.dashboardBody .menu li .site-2 {
+  display: inline-block;
+  width: 4px;
+  background: #c2c2ff;
+  border-radius: 3px 0px 0px 3px;
+}
+
+.dashboardBody .menu li .site-3 {
+  display: inline-block;
+  width: 4px;
+  background: #8686ff;
+  border-radius: 3px 0px 0px 3px;
+}
+
+.dashboardBody .menu .item .btn-Finalize {
+  background: #7d7d7d;
+  border-radius: 10px;
+  border: none;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  padding: 10px 25px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.dashboardBody .menu .item .btn-Results {
+  background: #2ee5ac;
+  border-radius: 10px;
+  border: none;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  padding: 10px 25px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.text-online {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  color: #1bda9d;
+}
+.text-paused {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  color: #ff8346;
+}
+.text-draft {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  color: #5c5c5c;
+}
+.text-stopped {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  color: #fe4848;
+}
+
+.resetBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.resetBox p {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #222222;
+  margin-bottom: 40px;
+}
+
+.resetBox button {
+  background: #2ee5ac;
+  border: 1px solid #2ee5ac;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  padding: 10px 25px;
+  cursor: pointer;
 }
